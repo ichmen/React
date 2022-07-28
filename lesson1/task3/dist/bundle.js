@@ -1,0 +1,1 @@
+(()=>{const e=document.querySelector("#root"),t=React.createElement("div",{class:"greeting"},React.createElement("h1",{class:"greeting__title"},'"Hello, world!"'),React.createElement("p",{class:"greeting__text"},'"I am learning React"'));ReactDOM.render(t,e)})();
