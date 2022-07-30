@@ -9,7 +9,7 @@ export default function Profile(props) {
         {`${props.userData.firstName} ${props.userData.lastName}`}
       </div>
       <div className="profile__birth">
-        {`Was born ${moment(props.userData.birthDate).format("D MMM YY")} in ${
+        {`Was born ${moment(props.userData.birthDate).format("DD MMM YY")} in ${
           props.userData.birthPlace
         }`}
       </div>
