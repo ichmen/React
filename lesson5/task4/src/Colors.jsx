@@ -10,9 +10,9 @@ export default class Colors extends React.Component {
     super(props);
   }
 
-  handler = (e) => {
+  handler = (color) => {
     // console.log(e.target.style.backgroundColor);
-    document.body.style.backgroundColor = e.target.style.backgroundColor;
+    document.body.style.backgroundColor = color;
   };
 
   render() {
@@ -20,17 +20,17 @@ export default class Colors extends React.Component {
       <div className="colors">
         <button
           className="colors__button"
-          onClick={this.handler}
+          onClick={() => this.handler(RED)}
           style={{ backgroundColor: RED }}
         ></button>
         <button
           className="colors__button"
-          onClick={this.handler}
+          onClick={() => this.handler(GREEN)}
           style={{ backgroundColor: GREEN }}
         ></button>
         <button
           className="colors__button"
-          onClick={this.handler}
+          onClick={() => this.handler(BLUE)}
           style={{ backgroundColor: BLUE }}
         ></button>
       </div>
