@@ -20,7 +20,7 @@ export default class Page extends React.Component {
         ></button>
         <button
           className="btn"
-          onClick={() => this.handler("Another exciting text")}
+          onClick={() => this.handler("Another exciting text.")}
         ></button>
         <button className="btn" onClick={() => this.handler("")}></button>
       </>
