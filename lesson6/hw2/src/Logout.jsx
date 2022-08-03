@@ -1,8 +1,8 @@
 import React from "react";
 
-export default function Logout({ callback }) {
+export default function Logout({ onLogout }) {
   return (
-    <button className="logout btn" onClick={callback}>
+    <button className="logout btn" onClick={onLogout}>
       Logout
     </button>
   );

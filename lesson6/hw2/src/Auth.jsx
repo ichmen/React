@@ -25,9 +25,9 @@ export default class Auth extends React.Component {
     return this.state.spinner ? (
       <Spinner size={20} />
     ) : this.state.isLogged ? (
-      <Logout callback={() => this.handler()} />
+      <Logout onLogout={() => this.handler()} />
     ) : (
-      <Login callback={() => this.handler()} />
+      <Login onLogin={() => this.handler()} />
     );
   }
 }
