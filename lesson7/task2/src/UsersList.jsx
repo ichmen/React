@@ -1,7 +1,7 @@
 import React from "react";
 import User from "./User";
 
-export default class UserList extends React.Component {
+export default class UsersList extends React.Component {
   constructor(props) {
     super(props);
     this.users = props.users.slice();
