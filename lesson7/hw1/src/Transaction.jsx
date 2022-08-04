@@ -1,7 +1,7 @@
 import React from "react";
 import moment from "moment";
 
-export default function Transactions({ from, to, amount, rate, time }) {
+export default function Transaction({ from, to, amount, rate, time }) {
   const numberFormatter = new Intl.NumberFormat("en-GB");
   return (
     <li className="transaction">
