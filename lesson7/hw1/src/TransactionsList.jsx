@@ -5,7 +5,7 @@ export default class TransactionsList extends React.Component {
   render() {
     return (
       <ul className="transactions">
-        {this.props.transactions.slice().map((transaction) => {
+        {this.props.transactions.map((transaction) => {
           return <Transaction key={transaction.id} {...transaction} />;
         })}
       </ul>
