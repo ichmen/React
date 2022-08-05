@@ -9,13 +9,33 @@ const getTimeWithOffset = (offset) => {
   );
 };
 
-export default function Clock({ location, offset }) {
-  return (
-    <div className="clock">
-      <div className="clock__location">{location}</div>
-      <div className="clock__time">
-        {moment(getTimeWithOffset(offset)).format("LTS")}
+export default class Clock extends React.Component {
+  constructor(props) {
+    super(props);
+    this.location = props.location;
+    this.offset = props.offset;
+  }
+  state = {
+    working: true,
+  };
+
+  componentDidMount() {
+    this.state.intervalId = setInterval(() => {
+      this.setState({ working: !this.state.working });
+    }, 1000);
+  }
+  componentWillUnmount() {
+    clearInterval(this.state.intervalId);
+  }
+
+  render() {
+    return (
+      <div className="clock">
+        <div className="clock__location">{this.location}</div>
+        <div className="clock__time">
+          {moment(getTimeWithOffset(this.offset)).format("LTS")}
+        </div>
       </div>
-    </div>
-  );
+    );
+  }
 }

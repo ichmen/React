@@ -23,14 +23,14 @@ export default class App extends React.Component {
       offset: -7,
     },
   ];
-  componentDidMount() {
-    this.state.intervalId = setInterval(() => {
-      this.setState({ working: !this.state.working });
-    }, 1000);
-  }
-  componentWillUnmount() {
-    clearInterval(this.state.intervalId);
-  }
+  // componentDidMount() {
+  //   this.state.intervalId = setInterval(() => {
+  //     this.setState({ working: !this.state.working });
+  //   }, 1000);
+  // }
+  // componentWillUnmount() {
+  //   clearInterval(this.state.intervalId);
+  // }
 
   onToggle() {
     this.setState({ isVisible: !this.state.isVisible });
