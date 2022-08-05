@@ -1,19 +1,50 @@
 import React from "react";
 import User from "./User";
 import Pagination from "./Pagination";
-// import users from "./users";
 
 class UsersList extends React.Component {
   constructor(props) {
     super(props);
-    console.log(props.users);
+    this.users = props.users
+      .slice()
+      .map((element, index) => ({ ...element, id: index }));
+    this.itemsPerPage = 3;
+    console.log(this.users);
   }
+  state = {
+    currentPage: 1,
+  };
+
+  goNext() {
+    this.setState({
+      currentPage: (this.state.currentPage += 1),
+    });
+  }
+  goPrev() {
+    this.setState({
+      currentPage: (this.state.currentPage -= 1),
+    });
+  }
+
   render() {
     return (
       <div>
-        <Pagination {goPrev, goNext, currentPage, totalItems, itemsPerPage}/>
+        <Pagination
+          goPrev={() => this.goPrev()}
+          goNext={() => this.goNext()}
+          currentPage={this.state.currentPage}
+          totalItems={this.users.length}
+          itemsPerPage={this.itemsPerPage}
+        />
         <ul>
-          <User />
+          {this.users
+            .slice(
+              (this.state.currentPage - 1) * this.itemsPerPage,
+              this.state.currentPage * this.itemsPerPage
+            )
+            .map((user) => (
+              <User key={user.id} {...user} />
+            ))}
         </ul>
       </div>
     );
