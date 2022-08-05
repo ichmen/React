@@ -21,7 +21,7 @@ export default class Life extends React.Component {
   }
   componentWillUnmount() {
     console.log(
-      "componentWillUnmount(): clean before DOM related to component will be removed"
+      "componentWillUnmount(): cleanup before DOM related to component will be removed"
     );
   }
   render() {
