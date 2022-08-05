@@ -3,7 +3,7 @@ const transactions = [
     id: "id-0",
     from: "USD",
     to: "EUR",
-    amount: 1200,
+    amount: 1300,
     rate: 0.8,
     time: "2019-01-10T17:08:35.447Z",
   },
