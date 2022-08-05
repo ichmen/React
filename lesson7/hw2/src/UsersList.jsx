@@ -9,7 +9,6 @@ class UsersList extends React.Component {
       .slice()
       .map((element, index) => ({ ...element, id: index }));
     this.itemsPerPage = 3;
-    console.log(this.users);
   }
   state = {
     currentPage: 1,
