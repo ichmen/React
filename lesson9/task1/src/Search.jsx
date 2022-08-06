@@ -13,13 +13,17 @@ export default class Search extends React.Component {
   };
   render() {
     return (
-      <form className="search">
+      <form className="search" onSubmit={this.clickHandle}>
         <input
           type="text"
           className="search__input"
           onChange={this.changeHandle}
         />
-        <button className="search__button" onClick={this.clickHandle}>
+        <button
+          className="search__button"
+          type="submit"
+          onClick={this.clickHandle}
+        >
           Search
         </button>
       </form>
