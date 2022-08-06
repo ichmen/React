@@ -18,7 +18,6 @@ export default class Search extends React.Component {
           type="text"
           className="search__input"
           onChange={this.changeHandle}
-          value={this.state.value}
         />
         <button className="search__button" onClick={this.clickHandle}>
           Search
