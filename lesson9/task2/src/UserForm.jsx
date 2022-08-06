@@ -13,15 +13,17 @@ export default class UserForm extends React.Component {
   changeHandle = (event) => {
     const { name, value, type, checked } = event.target;
     const val = type === "checkbox" ? checked : value;
-
-    event.persist();
     this.setState({ [name]: val });
-    console.log(this.state);
+  };
+
+  onSubmit = (event) => {
+    event.preventDefault();
+    this.props.onSubmit(this.state);
   };
 
   render() {
     return (
-      <form className="login-form" onSubmit={this.submitHandler}>
+      <form className="login-form" onSubmit={this.onSubmit}>
         <h1 className="form-title">Profile</h1>
         <div className="form-control">
           <label className="form-label" htmlFor="name">
