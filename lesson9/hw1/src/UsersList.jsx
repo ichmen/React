@@ -19,7 +19,6 @@ export default class UsersList extends React.Component {
     const newArr = this.props.users.filter(({ name }) => {
       return name.toUpperCase().includes(searchText.toUpperCase());
     });
-    // console.log(newArr.length);
     this.setState({
       users: newArr,
       count: newArr.length,
