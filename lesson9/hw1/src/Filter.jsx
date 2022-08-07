@@ -15,7 +15,7 @@ export default class Filter extends React.Component {
 
   changeHandler = (event) => {
     this.setState({ filterText: event.target.value, count: this.props.count });
-    this.props.onChange(event.target.value);
+    this.state.onChange(event.target.value);
   };
 
   render() {
