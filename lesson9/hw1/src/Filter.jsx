@@ -11,12 +11,11 @@ export default class Filter extends React.Component {
       onChange,
     };
   }
-  setRef = (node) => {
-    this.textRef = node;
-  };
+
   onChange = (event) => {
-    this.state.onChange(event.target.value);
-    this.setState({ filterText: event.target.value, count: this.props.count });
+    const filterText = event.target.value;
+    this.state.onChange(filterText);
+    this.setState({ filterText });
   };
 
   render() {
@@ -33,4 +32,3 @@ export default class Filter extends React.Component {
     );
   }
 }
-// value={this.state.filterText}

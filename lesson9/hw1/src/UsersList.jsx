@@ -15,14 +15,14 @@ export default class UsersList extends React.Component {
     this.onChange("");
   }
 
-  onChange = (searchText) => {
+  onChange = (filterText) => {
     const newArr = this.props.users.filter(({ name }) => {
-      return name.toUpperCase().includes(searchText.toUpperCase());
+      return name.toUpperCase().includes(filterText.toUpperCase());
     });
     this.setState({
       users: newArr,
       count: newArr.length,
-      filterText: searchText,
+      filterText,
     });
   };
   render() {
