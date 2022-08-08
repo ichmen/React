@@ -6,33 +6,27 @@ export default class UsersList extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      users: this.props.users,
-      count: this.props.users.length,
       filterText: "",
     };
   }
-
   onChange = (event) => {
-    const filterText = event.target.value;
-    const newArr = this.props.users.filter(({ name }) => {
-      return name.toUpperCase().includes(filterText.toUpperCase());
-    });
     this.setState({
-      users: newArr,
-      count: newArr.length,
-      filterText,
+      filterText: event.target.value,
     });
   };
   render() {
+    const newArr = this.props.users.filter(({ name }) =>
+      name.toUpperCase().includes(this.state.filterText.toUpperCase())
+    );
     return (
       <div>
         <Filter
           onChange={this.onChange}
           filterText={this.state.filterText}
-          count={this.state.count}
+          count={newArr.length}
         />
         <ul className="users">
-          {this.state.users.map(({ name, age }, index) => {
+          {newArr.map(({ name, age }, index) => {
             return <User key={index} name={name} age={age} />;
           })}
         </ul>
