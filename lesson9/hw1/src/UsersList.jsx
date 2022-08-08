@@ -6,16 +6,14 @@ export default class UsersList extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      users: props.users,
-      count: props.users.lenght,
+      users: this.props.users,
+      count: this.props.users.length,
       filterText: "",
     };
   }
-  componentDidMount() {
-    this.onChange("");
-  }
 
-  onChange = (filterText) => {
+  onChange = (event) => {
+    const filterText = event.target.value;
     const newArr = this.props.users.filter(({ name }) => {
       return name.toUpperCase().includes(filterText.toUpperCase());
     });
