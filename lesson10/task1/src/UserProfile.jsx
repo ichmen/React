@@ -1,8 +1,10 @@
 import React from "react";
 
-export default function UserProfile({
-  userData: { name, location, avatar_url },
-}) {
+export default function UserProfile({ userData }) {
+  if (!userData) {
+    return null;
+  }
+  const { name, location, avatar_url } = userData;
   return (
     <div className="user">
       <img alt="User Avatar" src={avatar_url} className="user__avatar" />

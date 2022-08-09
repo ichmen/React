@@ -4,7 +4,7 @@ export default function UserMenu({ userData }) {
   if (!userData) {
     return null;
   }
-
+  const { name, location, avatar_url } = userData;
   return (
     <div className="menu">
       <span className="menu__greeting">{`Hello, ${userData.name}`}</span>
