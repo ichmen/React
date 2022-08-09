@@ -11,14 +11,14 @@ export default class App extends React.Component {
   }
 
   componentDidMount() {
-    this.fetchUserData();
+    this.fetchUserData(this.props.userId);
   }
 
-  fetchUserData() {
-    fetch(`https://api.github.com/users/${this.props.userId}`)
+  fetchUserData = (userId) => {
+    fetch(`https://api.github.com/users/${userId}`)
       .then((response) => response.json())
       .then((userData) => this.setState({ userData }));
-  }
+  };
 
   render() {
     const userData = this.state.userData;
