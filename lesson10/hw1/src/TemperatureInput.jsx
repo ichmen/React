@@ -1,5 +1,4 @@
 import React from "react";
-import BoilingVerdict from "./BoilingVerdict";
 
 export default class TemperatureInput extends React.Component {
   constructor(props) {
@@ -20,7 +19,6 @@ export default class TemperatureInput extends React.Component {
       <fieldset>
         <legend>Enter temperature in {this.scaleNames[scale]}:</legend>
         <input value={temperature} onChange={this.handleChange} />
-        <BoilingVerdict celsius={parseFloat(temperature)} />
       </fieldset>
     );
   }
