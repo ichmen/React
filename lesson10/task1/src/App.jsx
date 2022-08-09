@@ -9,9 +9,7 @@ export default class App extends React.Component {
   componentDidMount() {
     fetch("https://api.github.com/users/" + this.props.userName)
       .then((response) => response.json())
-      .then(({ name, location, avatar_url }) =>
-        this.setState({ userData: { name, location, avatar_url } })
-      );
+      .then((userData) => this.setState({ userData }));
   }
   render() {
     const userData = this.state.userData;
