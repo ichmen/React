@@ -4,4 +4,4 @@ import App from "./App";
 import "./index.scss";
 
 const root = document.querySelector("#root");
-ReactDOM.render(<App userName="facebook" />, root);
+ReactDOM.render(<App userId="facebook" />, root);

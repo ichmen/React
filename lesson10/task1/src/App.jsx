@@ -11,7 +11,7 @@ export default class App extends React.Component {
   }
 
   fetchUserData() {
-    fetch("https://api.github.com/users/" + this.props.userName)
+    fetch("https://api.github.com/users/" + this.props.userId)
       .then((response) => response.json())
       .then((userData) => this.setState({ userData }));
   }
