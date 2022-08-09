@@ -3,9 +3,13 @@ import UserProfile from "./UserProfile";
 import UserMenu from "./UserMenu";
 
 export default class App extends React.Component {
-  state = {
-    userData: null,
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      userData: null,
+    };
+  }
+
   componentDidMount() {
     this.fetchUserData();
   }
