@@ -22,9 +22,7 @@ export default class App extends React.Component {
 
   render() {
     const userData = this.state.userData;
-    if (!userData) {
-      return;
-    }
+
     return (
       <div className="page">
         <header className="header">
