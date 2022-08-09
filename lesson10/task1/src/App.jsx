@@ -7,10 +7,15 @@ export default class App extends React.Component {
     userData: null,
   };
   componentDidMount() {
+    this.fetchUserData();
+  }
+
+  fetchUserData() {
     fetch("https://api.github.com/users/" + this.props.userName)
       .then((response) => response.json())
       .then((userData) => this.setState({ userData }));
   }
+
   render() {
     const userData = this.state.userData;
     if (!userData) {
