@@ -25,6 +25,7 @@ export default class FilterableProductTable extends React.Component {
           filterText={this.state.filterText}
           onChange={this.searchChangeHandler}
           onClick={this.checkboxChangeHandler}
+          checked={this.state.inStockOnly}
         />
         <ProductTable
           products={products}
