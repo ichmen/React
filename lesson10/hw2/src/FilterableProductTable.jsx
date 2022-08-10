@@ -1,7 +1,7 @@
 import React from "react";
 import SearchBar from "./SearchBar";
 import ProductTable from "./ProductTable";
-
+import products from "./products.js";
 export default class FilterableProductTable extends React.Component {
   constructor(props) {
     super(props);
@@ -27,7 +27,7 @@ export default class FilterableProductTable extends React.Component {
           onClick={this.checkboxChangeHandler}
         />
         <ProductTable
-          products={this.props.products}
+          products={products}
           filterText={this.state.filterText}
           inStockOnly={this.state.inStockOnly}
         />
