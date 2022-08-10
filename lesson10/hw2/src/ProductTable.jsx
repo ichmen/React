@@ -7,7 +7,11 @@ export default function ProductTable({ products, inStockOnly, filterText }) {
   let currentCategory = null;
 
   products.forEach((product) => {
+    // if (product.name.toUpperCase().indexOf(filterText.toUpperCase()) === -1) {
     if (product.name.indexOf(filterText) === -1) {
+      return;
+    }
+    if (inStockOnly && !product.stocked) {
       return;
     }
 
@@ -18,9 +22,6 @@ export default function ProductTable({ products, inStockOnly, filterText }) {
           key={product.category}
         />
       );
-    }
-    if (inStockOnly && !product.stocked) {
-      return;
     }
 
     rows.push(<ProductRow product={product} key={product.name} />);
