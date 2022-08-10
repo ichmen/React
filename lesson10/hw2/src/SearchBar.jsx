@@ -10,8 +10,8 @@ export default function SearchBar({ filterText, onChange, onClick }) {
         onChange={(e) => onChange(e)}
       ></input>
       <p>
-        <input type="checkbox" onClick={(e) => onClick(e)} />
-        Only show products in stock
+        <input type="checkbox" onClick={(e) => onClick(e)} /> Only show products
+        in stock
       </p>
     </form>
   );
