@@ -4,7 +4,7 @@ export default function Expand({ children, title, isVisible, clickHandler }) {
   return (
     <div className="expand border">
       <div className="expand__header">
-        <span className="expand__title">{isVisible && title}</span>
+        <span className="expand__title">{title}</span>
         <button className="expand__toggle-btn" onClick={() => clickHandler()}>
           <i
             className={
@@ -13,9 +13,11 @@ export default function Expand({ children, title, isVisible, clickHandler }) {
           ></i>
         </button>
       </div>
-      <div className="expand__content">
-        <p>{isVisible && children}</p>
-      </div>
+      {isVisible && (
+        <div className="expand__content">
+          <p>{children}</p>
+        </div>
+      )}
     </div>
   );
 }
