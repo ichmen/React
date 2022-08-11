@@ -11,14 +11,14 @@ export default class App extends React.Component {
   };
   render() {
     return (
-      <div class="app">
+      <div className="app">
         <Expand
           isVisible={this.state.isVisible}
           clickHandler={this.visibleHandler}
           title="Some text"
         >
-          Hooks are a new addition in React 16.8. They let you use state and
-          other React features without writing a class.
+          {this.state.isVisible &&
+            "Hooks are a new addition in React 16.8. They let you use state and other React features without writing a class."}
         </Expand>
       </div>
     );
