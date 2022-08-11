@@ -4,7 +4,7 @@ export default function Expand({ children, title, isVisible, clickHandler }) {
   return (
     <div className="expand border">
       <div className="expand__header">
-        <span className="expand__title">{title}</span>
+        <span className="expand__title">{isVisible && title}</span>
         <button className="expand__toggle-btn" onClick={() => clickHandler()}>
           <i
             className={
