@@ -13,7 +13,6 @@ export default function Expand({ children, title, isVisible, clickHandler }) {
           ></i>
         </button>
       </div>
-
       <div className="expand__content">{isVisible && <p>{children}</p>}</div>
     </div>
   );
