@@ -5,7 +5,6 @@ export function fetchTasks() {
 }
 
 export function postTask(task) {
-  //   console.log(task);
   return fetch(baseUrl, {
     method: "POST",
     headers: {

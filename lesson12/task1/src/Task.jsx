@@ -6,7 +6,7 @@ function Task({ text, done, id, onCheckBoxChange, onDelete }) {
   Task.propTypes = {
     text: PropTypes.string.isRequired,
     done: PropTypes.bool.isRequired,
-    id: PropTypes.number.isRequired,
+    id: PropTypes.string.isRequired,
     onCheckBoxChange: PropTypes.func.isRequired,
     onDelete: PropTypes.func.isRequired,
   };

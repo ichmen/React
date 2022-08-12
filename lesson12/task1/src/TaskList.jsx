@@ -24,7 +24,6 @@ class TaskList extends React.Component {
   handleCheckboxChange = (id) => {
     const taskToUpdate = this.state.tasks.find((task) => task.id === id);
     const modifiedTask = { ...taskToUpdate, done: !taskToUpdate.done };
-    console.log(modifiedTask);
     updateTask(modifiedTask).then(() => this.tasksListUpdate());
   };
 
