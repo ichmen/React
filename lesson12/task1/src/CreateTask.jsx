@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-class CreateTask extends React.PureComponent {
+class CreateTask extends React.Component {
   state = { value: "" };
 
   onChange = (event) => {
