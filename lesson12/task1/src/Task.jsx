@@ -20,7 +20,7 @@ function Task({ text, done, id, onCheckBoxChange, onDelete }) {
         type="checkbox"
         className="list-item__checkbox"
         defaultChecked={done}
-        onClick={() => onCheckBoxChange(id)}
+        onChange={() => onCheckBoxChange(id)}
       />
       <span className="list-item__text">{text}</span>
       <button
