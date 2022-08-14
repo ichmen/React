@@ -10,6 +10,10 @@ export default function ConnectionStatus() {
     function toggleStatus(event) {
       statusChange(event.target.navigator.onLine);
     }
+    return () => {
+      window.removeEventListener("online", toggleStatus);
+      window.removeEventListener("offline", toggleStatus);
+    };
   }, [window.navigator.onLine]);
   return (
     <div className={classNames("status", { status_offline: !isOnline })}>
