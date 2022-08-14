@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import moment from "moment";
 
-export default function Clock({ location, offset, isVisible }) {
+export default function Clock({ location, offset }) {
   const [time, setTime] = useState(new Date());
-
+  const isVisible = true;
   useEffect(() => {
     const interval = setInterval(() => {
       setTime(new Date());
