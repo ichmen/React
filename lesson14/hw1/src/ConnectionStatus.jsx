@@ -17,7 +17,7 @@ export default function ConnectionStatus() {
   }, [window.navigator.onLine]);
   return (
     <div className={classNames("status", { status_offline: !isOnline })}>
-      {isOnline ? "Online" : "Offline"}
+      {isOnline ? "online" : "offline"}
     </div>
   );
 }
