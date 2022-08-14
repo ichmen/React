@@ -16,7 +16,7 @@ export default function Products() {
       </ul>
       <Switch>
         <Route exact path="/products">
-          Select a product please
+          <span>Select a product please</span>
         </Route>
         <Route exact path="/products/:productId" component={Product} />
       </Switch>
