@@ -23,5 +23,9 @@ const users = [
     name: "Tom",
     age: 60,
   },
+  {
+    name: "Tom",
+    age: 60,
+  },
 ];
 export default users;

@@ -39,7 +39,7 @@ const Pagination = ({
         {isPrevPageAvailable ? "←" : ""}
       </button>
       <span className="pagination__page">{currentPage}</span>
-      <button disabled={isNextPageAvailable} onClick={goNext} className="btn">
+      <button disabled={!isNextPageAvailable} onClick={goNext} className="btn">
         {isNextPageAvailable ? "→" : ""}
       </button>
     </div>
